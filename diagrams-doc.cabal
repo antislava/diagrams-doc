@@ -44,7 +44,7 @@ executable diagrams-doc
   build-depends: base >= 4.8 && < 5
                , diagrams-doc
                , diagrams-builder >= 0.7.2 && < 0.9
-               , shake >= 0.15 && < 0.17
+               , shake >= 0.15
                , hakyll >= 4.7 && < 4.13
                , docutils >= 0.2 && < 0.3
                , safe >= 0.3 && < 0.4
@@ -95,6 +95,6 @@ executable Site
                   , containers
                   , filepath
                   , cmdargs
-                  , pandoc >= 2.0 && < 2.3
+                  , pandoc >= 2.0
                   , text
                   , process
