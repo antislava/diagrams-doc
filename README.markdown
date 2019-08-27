@@ -64,3 +64,25 @@ leave this invocation of `stack exec diagrams-doc -- preview` running, and then 
 another process calling `stack exec diagrams-doc -- build` repeatedly in a
 loop.  The website will now automatically be rebuilt any time any
 source files change.
+
+### Nix
+
+Nix shell and build work but running executable raises run-time errors due to missing site content dependencies.
+
+#### Nix shell
+
+```sh
+nix-shell
+
+cabal build
+
+cabal new-repl exe:diagrams-doc
+# >>> :main
+```
+
+#### Nix build
+
+```sh
+nix-build --out-link result
+./result/bin/diagrams-doc preview
+```
